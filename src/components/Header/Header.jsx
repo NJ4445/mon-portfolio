@@ -1,6 +1,6 @@
-/* Header.jsx */
 import React, { useState } from 'react';
 import styles from './Header.module.css';
+import backgroundImage from '../../assets/img/Joy2.webp'; // Assurez-vous que le chemin est correct
 
 function Header() {
   const [activeLink, setActiveLink] = useState('about');
@@ -14,7 +14,7 @@ function Header() {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className={styles.overlay}></div>
       <div className={styles.imageContainer}></div>
       <div className={styles.textOverlay}>
