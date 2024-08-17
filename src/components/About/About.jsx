@@ -1,3 +1,4 @@
+/* About.jsx */
 import React from 'react';
 import styles from './About.module.css';
 import aboutImage from '../../assets/img/about.jpg'; 

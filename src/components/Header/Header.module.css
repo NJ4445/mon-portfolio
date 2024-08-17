@@ -1,68 +1,62 @@
-/* Container de l'en-tête */
+/* Header.module.css */
 .header {
   position: relative;
   text-align: center;
   padding: 0;
   background-image: url('../../assets/img/Joy.jpg');
-  background-size: cover; /* Assure que l'image couvre le conteneur */
-  background-position: center 38%; /* Centre l'image horizontalement et verticalement */
-  background-attachment: fixed; /* Fixe l'image lors du défilement */
+  background-size: cover;
+  background-position: center 38%;
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centre le contenu verticalement */
+  justify-content: center;
 }
 
-/* Conteneur pour l'image */
 .imageContainer {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; /* Assure que le conteneur couvre toute la hauteur */
+  bottom: 0;
   background: inherit;
   z-index: -1;
 }
 
-/* Styles pour l'élément overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Ajustez la valeur alpha (0.5) pour obtenir le niveau de sombrement désiré */
-  z-index: 0; /* Assurez-vous qu'il est derrière le texte mais devant l'image */
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
 }
 
-/* Conteneur du texte superposé */
 .textOverlay {
   position: absolute;
-  top: 70%; /* Centre verticalement */
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   z-index: 1;
-  width: 90%; /* Évite que le texte dépasse */
-  padding: 0 1rem; /* Ajoute du padding pour les petits écrans */
+  width: 90%;
+  padding: 0 1rem;
 }
 
-/* Styles pour le titre principal */
 .mainTitle {
-  font-size: 5vw; /* Ajusté pour s'adapter à différentes tailles d'écran */
+  font-size: 5vw;
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
 
-/* Styles pour le paragraphe principal */
 .mainParagraph {
-  font-size: 2.5vw; /* Ajusté pour s'adapter à différentes tailles d'écran */
+  font-size: 2.5vw;
   margin-top: 10px;
   padding: 0;
 }
 
-/* Styles pour la barre de navigation */
 .nav {
   position: absolute;
   bottom: 0;
@@ -72,33 +66,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2vw; /* Utilisation d'unités relatives */
+  padding: 2vw;
 }
 
-/* Styles pour les liens de navigation */
 .navLink {
-  font-size: 1.5vw; /* Utilisation d'unités relatives */
+  font-size: 1.5vw;
   color: white;
-  margin: 0 2vw; /* Utilisation d'unités relatives */
+  margin: 0 2vw;
   text-decoration: none;
-  padding: 0.5vw; /* Utilisation d'unités relatives */
+  padding: 0.5vw;
   transition: background-color 0.3s ease;
-  border-radius: 0.5vw; /* Utilisation d'unités relatives */
 }
 
-/* Couleur de fond pour le lien actif */
 .active {
   background-color: white;
   color: black;
 }
 
-/* Couleur de fond au survol */
 .navLink:hover {
   background-color: white;
   color: black;
 }
 
-/* Styles spécifiques pour les grands écrans */
+/* Media query pour les petits écrans */
 @media (min-width: 769px) {
   .header {
     height: 100vh;
@@ -121,10 +111,9 @@
   }
 }
 
-/* Styles pour les écrans moyens et petits */
 @media (max-width: 768px) {
   .header {
-    height: 100vh; /* Assure que l'en-tête prend toute la hauteur de l'écran */
+    height: 100vh;
   }
 
   .nav {
@@ -134,14 +123,14 @@
 
   .navLink {
     font-size: 1em;
-    margin: 0 1vw; /* Ajusté pour les petits écrans */
+    margin: 0 1vw;
   }
 
   .mainTitle {
-    font-size: 4vw; /* Ajusté pour les petits écrans */
+    font-size: 4vw;
   }
 
   .mainParagraph {
-    font-size: 3vw; /* Ajusté pour les petits écrans */
+    font-size: 3vw;
   }
 }

@@ -1,3 +1,4 @@
+/* Skills.jsx */
 import React from 'react';
 import styles from './Skills.module.css';
 
@@ -10,7 +11,6 @@ function Skills() {
         <li className={styles.javaScript}>JavaScript</li>
         <li className={styles.react}>React</li>
         <li className={styles.responsiveDesign}>Responsive Design</li>
-        {/* Ajoutez d'autres compétences ici... */}
       </ul>
     </section>
   );

@@ -31,7 +31,7 @@
 }
 
 .submitButton {
-  background-color: #007bff;
+  background-color: rgb(51, 51, 51);
   color: white;
   padding: 10px;
   border: none;
@@ -40,7 +40,7 @@
 }
 
 .submitButton:hover {
-  background-color: #0056b3;
+  color: rgba(255, 255, 255, 0.514); 
 }
 
 .confirmationMessage {
@@ -53,6 +53,7 @@
   text-align: center;
 }
 
+/* Media query pour les petits écrans */
 @media (max-width: 768px) {
   .contact {
     padding: 20px;

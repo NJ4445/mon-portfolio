@@ -1,3 +1,4 @@
+/* Skills.module.css */
 .skills {
   padding: 40px;
   background-color: #fff;
@@ -15,29 +16,29 @@
   font-size: 1.1em;
   padding: 10px;
   border-radius: 4px;
-  color: #fff; /* Couleur du texte en blanc pour le contraste */
+  color: #fff; 
 }
 
 /* Styles spécifiques pour chaque compétence */
 .htmlCss {
-  background-color: #E44D26; /* Rouge pour HTML & CSS */
+  background-color: #E44D26; 
 }
 
 .javaScript {
-  background-color: #F7DF1E; /* Jaune pour JavaScript */
-  color: #000; /* Texte noir pour un meilleur contraste */
+  background-color: #F7DF1E; 
+  color: #000; 
 }
 
 .react {
-  background-color: #61DAFB; /* Bleu clair pour React */
-  color: #000; /* Texte noir pour un meilleur contraste */
+  background-color: #61DAFB; 
+  color: #000;
 }
 
 .responsiveDesign {
-  background-color: #4CAF50; /* Vert pour Responsive Design */
+  background-color: #4CAF50; 
 }
 
-/* Media query pour ajuster le padding et la taille de la police sur les petits écrans */
+/* Media query pour les petits écrans */
 @media (max-width: 768px) {
   .skills {
       padding: 20px;

@@ -1,11 +1,16 @@
+/* Header.jsx */
 import React, { useState } from 'react';
 import styles from './Header.module.css';
 
 function Header() {
   const [activeLink, setActiveLink] = useState('about');
 
-  const handleClick = (link) => {
+  const handleClick = (link, event) => {
+    event.preventDefault(); // Empêche le comportement par défaut du lien
     setActiveLink(link);
+
+    // Obtient l'élément cible et fait défiler en douceur vers lui
+    document.getElementById(link).scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -22,28 +27,28 @@ function Header() {
         <a
           href="#about"
           className={`${styles.navLink} ${activeLink === 'about' ? styles.active : ''}`}
-          onClick={() => handleClick('about')}
+          onClick={(event) => handleClick('about', event)}
         >
-          About
+          À propos
         </a>
         <a
           href="#projects"
           className={`${styles.navLink} ${activeLink === 'projects' ? styles.active : ''}`}
-          onClick={() => handleClick('projects')}
+          onClick={(event) => handleClick('projects', event)}
         >
-          Projects
+          Projets
         </a>
         <a
           href="#skills"
           className={`${styles.navLink} ${activeLink === 'skills' ? styles.active : ''}`}
-          onClick={() => handleClick('skills')}
+          onClick={(event) => handleClick('skills', event)}
         >
-          Skills
+          Compétences
         </a>
         <a
           href="#contact"
           className={`${styles.navLink} ${activeLink === 'contact' ? styles.active : ''}`}
-          onClick={() => handleClick('contact')}
+          onClick={(event) => handleClick('contact', event)}
         >
           Contact
         </a>

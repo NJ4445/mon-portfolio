@@ -1,61 +1,57 @@
+/* Main.module.css */
 .main {
   padding: 20px;
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(2, 1fr); /* Deux colonnes par défaut */
+  grid-template-columns: repeat(2, 1fr);
 }
 
-/* Styles spécifiques pour les grands écrans */
+section {
+  min-height: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.aboutSection {
+  background-color: #e0f7fa;
+}
+
+.projectsSection {
+  background-color: #ffecb3;
+}
+
+.skillsSection {
+  background-color: #c8e6c9;
+}
+
+.contactSection {
+  background-color: #fce4ec;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+/* Media query pour les petits écrans */
 @media (min-width: 769px) {
   .main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Styles pour les écrans moyens et petits */
 @media (max-width: 768px) {
   .main {
-    grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    grid-template-columns: 1fr;
     padding: 10px;
     gap: 20px;
   }
-}
-
-/* Assurez-vous que les sections ont un minimum de hauteur pour être visibles */
-section {
-  min-height: 300px; /* Ajustez en fonction du contenu */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation douce */
-}
-
-/* Effet de survol pour les sections */
-section:hover {
-  transform: scale(1.03); /* Zoom léger au survol */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
-}
-
-/* Couleurs de fond spécifiques pour chaque section */
-.aboutSection {
-  background-color: #e0f7fa; /* Bleu clair */
-}
-
-.projectsSection {
-  background-color: #ffecb3; /* Jaune pâle */
-}
-
-.skillsSection {
-  background-color: #c8e6c9; /* Vert clair */
-}
-
-.contactSection {
-  background-color: #fce4ec; /* Rose pâle */
-}
-
-/* Style global pour les titres dans les sections */
-section h2 {
-  margin-top: 0;
-  font-size: 2em;
 }
