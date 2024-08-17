@@ -1,0 +1,37 @@
+.projects {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projectList {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .projectItem {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .projectItem h3 {
+    margin-top: 0;
+  }
+  
+  .projectItem a {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .projects {
+      padding: 20px;
+    }
+  
+    .projectItem {
+      padding: 15px;
+    }
+  }
+  
