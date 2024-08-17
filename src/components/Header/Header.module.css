@@ -1,94 +1,147 @@
 /* Container de l'en-tête */
 .header {
-    position: relative;
-    text-align: center;
-    padding: 0;
-    background-image: url('../../assets/img/home2.jpg');
-    background-size: cover;
-    background-position: center 38%; /* Ajuste la position de l'image */
-    background-attachment: fixed; /* Rend l'image fixe */
-    height: 100vh; /* Assure que le header prend toute la hauteur de la fenêtre */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Espace entre la navigation et le contenu principal */
+  position: relative;
+  text-align: center;
+  padding: 0;
+  background-image: url('../../assets/img/Joy.jpg');
+  background-size: cover; /* Assure que l'image couvre le conteneur */
+  background-position: center 40%; /* Centre l'image horizontalement et verticalement */
+  background-attachment: fixed; /* Fixe l'image lors du défilement */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le contenu verticalement */
+}
+
+/* Conteneur pour l'image */
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Assure que le conteneur couvre toute la hauteur */
+  background: inherit;
+  z-index: -1;
+}
+
+/* Styles pour l'élément overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Ajustez la valeur alpha (0.5) pour obtenir le niveau de sombrement désiré */
+  z-index: 0; /* Assurez-vous qu'il est derrière le texte mais devant l'image */
+}
+
+/* Conteneur du texte superposé */
+.textOverlay {
+  position: absolute;
+  top: 70%; /* Centre verticalement */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  width: 90%; /* Évite que le texte dépasse */
+  padding: 0 1rem; /* Ajoute du padding pour les petits écrans */
+}
+
+/* Styles pour le titre principal */
+.mainTitle {
+  font-size: 5vw; /* Ajusté pour s'adapter à différentes tailles d'écran */
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* Styles pour le paragraphe principal */
+.mainParagraph {
+  font-size: 2.5vw; /* Ajusté pour s'adapter à différentes tailles d'écran */
+  margin-top: 10px;
+  padding: 0;
+}
+
+/* Styles pour la barre de navigation */
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw; /* Utilisation d'unités relatives */
+}
+
+/* Styles pour les liens de navigation */
+.navLink {
+  font-size: 1.5vw; /* Utilisation d'unités relatives */
+  color: white;
+  margin: 0 2vw; /* Utilisation d'unités relatives */
+  text-decoration: none;
+  padding: 0.5vw; /* Utilisation d'unités relatives */
+  transition: background-color 0.3s ease;
+  border-radius: 0.5vw; /* Utilisation d'unités relatives */
+}
+
+/* Couleur de fond pour le lien actif */
+.active {
+  background-color: white;
+  color: black;
+}
+
+/* Couleur de fond au survol */
+.navLink:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Styles spécifiques pour les grands écrans */
+@media (min-width: 769px) {
+  .header {
+    height: 100vh;
   }
-  
-  /* Conteneur pour l'image */
-  .imageContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 50px; /* Ajustez en fonction de la hauteur de la barre de navigation */
-    background: inherit; /* Utilise le fond de l'en-tête */
-    z-index: -1; /* Place l'image derrière le contenu */
-  }
-  
-  /* Styles pour la barre de navigation */
+
   .nav {
-    position: absolute; /* Positionnement absolu pour placer la nav en bas */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Couleur de fond semi-transparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    padding: 2vw;
   }
-  
-  /* Styles pour les liens de navigation */
+
   .navLink {
-    font-size: 1.2em;
-    color: white;
-    margin: 0 15px; /* Espace entre les liens */
-    text-decoration: none; /* Retire le soulignement */
-    padding: 10px; /* Ajoute de l'espace autour des liens */
-    transition: background-color 0.3s ease; /* Transition douce pour les changements de couleur */
-    border-radius: 5px; /* Bordures arrondies pour un effet esthétique */
+    font-size: 1.5em;
   }
-  
-  /* Couleur de fond pour le lien actif */
-  .active {
-    background-color: white;/* Couleur de fond pour le lien actif */
-    color: black; /* Couleur du texte pour le lien actif */
+
+  .mainTitle {
+    font-size: 3em;
   }
-  
-  /* Couleur de fond au survol */
-  .navLink:hover {
-    background-color: white; /* Couleur de fond au survol */
-    color: black;
+
+  .mainParagraph {
+    font-size: 1.5em;
   }
-  
-  /* Styles spécifiques pour les grands écrans */
-  @media (min-width: 769px) {
-    .header {
-      height: 100vh; /* Hauteur de l'en-tête pour les grands écrans */
-    }
-  
-    .nav {
-      padding: 20px; /* Augmente le padding pour les grands écrans */
-    }
-  
-    .navLink {
-      font-size: 1.5em; /* Augmente la taille des liens pour les grands écrans */
-    }
+}
+
+/* Styles pour les écrans moyens et petits */
+@media (max-width: 768px) {
+  .header {
+    height: 100vh; /* Assure que l'en-tête prend toute la hauteur de l'écran */
   }
-  
-  /* Styles pour les écrans moyens et petits */
-  @media (max-width: 768px) {
-    .header {
-      height: 50vh; /* Réduit la hauteur de l'en-tête sur les petits écrans */
-    }
-  
-    .nav {
-      flex-direction: row; /* Dispose les liens en ligne */
-      padding: 10px; /* Réduit le padding pour les petits écrans */
-    }
-  
-    .navLink {
-      font-size: 1em; /* Réduit la taille des liens pour les petits écrans */
-      margin: 0 10px; /* Ajuste les marges pour les petits écrans */
-    }
+
+  .nav {
+    flex-direction: row;
+    padding: 2vw;
   }
-  
+
+  .navLink {
+    font-size: 1em;
+    margin: 0 1vw; /* Ajusté pour les petits écrans */
+  }
+
+  .mainTitle {
+    font-size: 4vw; /* Ajusté pour les petits écrans */
+  }
+
+  .mainParagraph {
+    font-size: 3vw; /* Ajusté pour les petits écrans */
+  }
+}

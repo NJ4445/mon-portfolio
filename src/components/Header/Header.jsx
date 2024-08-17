@@ -10,7 +10,14 @@ function Header() {
 
   return (
     <header className={styles.header}>
+      <div className={styles.overlay}></div>
       <div className={styles.imageContainer}></div>
+      <div className={styles.textOverlay}>
+        <h1 className={styles.mainTitle}>Bienvenue sur mon Portfolio</h1>
+        <p className={styles.mainParagraph}>
+          Je suis un développeur passionné avec des compétences variées en développement web et en design.
+        </p>
+      </div>
       <nav className={styles.nav}>
         <a
           href="#about"
