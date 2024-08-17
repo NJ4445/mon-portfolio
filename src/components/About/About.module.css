@@ -29,7 +29,7 @@
   border-radius: 8px; 
 }
 
-/* Media query pour les petits écrans */
+/* Media query pour les écrans de taille tablette */
 @media (max-width: 768px) {
   .about {
     padding: 20px;
@@ -41,5 +41,20 @@
 
   .about p {
     font-size: 1em;
+  }
+}
+
+/* Media query pour les très petits écrans (smartphones) */
+@media (max-width: 480px) {
+  .about {
+    padding: 15px;
+  }
+
+  .about h2 {
+    font-size: 1.2em;
+  }
+
+  .about p {
+    font-size: 0.9em;
   }
 }
