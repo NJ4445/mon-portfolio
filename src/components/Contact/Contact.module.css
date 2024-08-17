@@ -25,7 +25,6 @@
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
   font-weight: bold;
   font-style: italic;
 }
@@ -63,7 +62,38 @@
     margin-bottom: 15px;
   }
 
-  .submitButton {
+  .formGroup input,
+  .formGroup textarea {
     padding: 8px;
+    font-size: 16px;
+    width: 97%;
+  }
+
+  .submitButton {
+    padding: 10px;
+    font-size: 16px;
   }
 }
+
+/* Media query pour les très petits écrans */
+@media (max-width: 480px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .formGroup {
+    margin-bottom: 10px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .submitButton {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
