@@ -1,16 +1,18 @@
+/* Header.module.css */
 .header {
   position: relative;
   text-align: center;
   padding: 0;
   background-image: url('../../assets/img/Joy2.webp');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Par défaut pour les grands écrans */
+  background-position: center; 
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 
 .imageContainer {
   position: absolute;
@@ -88,18 +90,37 @@
 }
 
 /* Media query pour les petits écrans */
+@media (min-width: 769px) {
+  .header {
+    height: 100vh;
+    background-image: url('../../assets/img/Joy2.webp');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .nav {
+    padding: 2vw;
+  }
+
+  .navLink {
+    font-size: 1.5em;
+  }
+
+  .mainTitle {
+    font-size: 3em;
+  }
+
+  .mainParagraph {
+    font-size: 1.5em;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     height: 100vh;
-    background-size: cover; /* Assure que l'image couvre tout le conteneur */
+    background-image: url('../../assets/img/Joy2.webp');
+    background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* Supprime le comportement fixe pour les petits écrans */
-  }
-
-  .textOverlay {
-    top: 40%; /* Positionnement du texte plus haut */
-    left: 50%;
-    transform: translate(-50%, -40%);
   }
 
   .nav {
@@ -118,31 +139,5 @@
 
   .mainParagraph {
     font-size: 3vw;
-  }
-}
-
-/* Media query pour les grands écrans */
-@media (min-width: 769px) {
-  .header {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Applique le comportement fixe pour les grands écrans */
-  }
-
-  .nav {
-    padding: 2vw;
-  }
-
-  .navLink {
-    font-size: 1.5em;
-  }
-
-  .mainTitle {
-    font-size: 3em;
-  }
-
-  .mainParagraph {
-    font-size: 1.5em;
   }
 }
