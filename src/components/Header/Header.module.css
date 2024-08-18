@@ -3,15 +3,16 @@
   position: relative;
   text-align: center;
   padding: 0;
-  background-image: url('../../assets/img/Joy.jpg');
+  background-image: url('../../assets/img/Joy2.webp');
   background-size: cover;
-  background-position: center 38%;
+  background-position: center; /* Modifié de center 38% à center */
   background-attachment: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 
 .imageContainer {
   position: absolute;
@@ -92,7 +93,7 @@
 @media (min-width: 769px) {
   .header {
     height: 100vh;
-    background-image: url('../../assets/img/Joy.jpg');
+    background-image: url('../../assets/img/Joy2.webp');
     background-size: cover;
     background-position: center;
   }
@@ -117,7 +118,7 @@
 @media (max-width: 768px) {
   .header {
     height: 100vh;
-    background-image: url('../../assets/img/Joy.jpg');
+    background-image: url('../../assets/img/Joy2.webp');
     background-size: cover;
     background-position: center;
   }
