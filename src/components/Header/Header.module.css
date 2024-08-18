@@ -92,6 +92,9 @@
 @media (min-width: 769px) {
   .header {
     height: 100vh;
+    background-image: url('../../assets/img/Joy.jpg');
+    background-size: cover;
+    background-position: center;
   }
 
   .nav {
