@@ -4,7 +4,7 @@
   text-align: center;
   padding: 0;
   background-image: url('../../assets/img/Joy2.webp');
-  background-size: cover;
+  background-size: contain;
   background-position: center; 
   background-attachment: fixed;
   height: 100vh;
@@ -93,8 +93,8 @@
 @media (min-width: 769px) {
   .header {
     height: 100vh;
-    background-image: url('../../assets/img/Joy2.webp');
-    background-size: cover;
+    
+    background-size: contain;
     background-position: center;
   }
 
@@ -118,8 +118,8 @@
 @media (max-width: 768px) {
   .header {
     height: 100vh;
-    background-image: url('../../assets/img/Joy2.webp');
-    background-size: cover;
+   
+    background-size: contain;
     background-position: center;
   }
 
