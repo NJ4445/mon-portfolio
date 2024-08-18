@@ -1,16 +1,29 @@
-/* Header.jsx */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 
 function Header() {
+  // Toujours initialiser activeLink à 'about' lors du chargement
   const [activeLink, setActiveLink] = useState('about');
 
-  const handleClick = (link, event) => {
-    event.preventDefault(); // Empêche le comportement par défaut du lien
-    setActiveLink(link);
+  useEffect(() => {
+    // Lors du montage, assurez-vous que 'about' est actif
+    const currentHash = window.location.hash.substring(1);
+    
+    if (currentHash && currentHash !== 'about') {
+      // Si un hash différent de 'about' est trouvé dans l'URL, on le remplace par 'about'
+      window.history.replaceState(null, null, '#about');
+    }
 
-    // Obtient l'élément cible et fait défiler en douceur vers lui
-    document.getElementById(link).scrollIntoView({ behavior: 'smooth' });
+    setActiveLink('about'); // Activer 'about' par défaut
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
+  const handleClick = (link, event) => {
+    event.preventDefault();
+    setActiveLink(link);
+    window.history.pushState(null, null, `#${link}`);
+    
+    document.getElementById(link)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
