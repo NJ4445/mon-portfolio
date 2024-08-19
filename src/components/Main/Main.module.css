@@ -1,7 +1,7 @@
-/* Styles généraux pour la mise en page */
+/* Main.module.css */
 body {
   margin: 0;
-  overflow-x: hidden; /* Empêche le défilement horizontal */
+  overflow-x: hidden; 
 }
 
 .main {
@@ -17,7 +17,7 @@ section {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
-  box-sizing: border-box; /* Assure que le padding et la bordure sont inclus dans la largeur totale de l'élément */
+  box-sizing: border-box; 
   transition: box-shadow 0.3s ease;
 }
 
