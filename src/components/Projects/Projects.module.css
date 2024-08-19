@@ -37,18 +37,18 @@
   list-style-type: none;
   padding: 0;
   margin: 10px 0;
-  display: flex; /* Utilisez Flexbox pour un meilleur contrôle */
-  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si nécessaire */
+  display: flex; 
+  flex-wrap: wrap; 
 }
 
 .skillItem {
   background-color: #ffecb3;
   padding: 5px 10px;
   border-radius: 5px;
-  margin: 5px 5px 5px 0; /* Ajoutez de la marge autour des éléments pour l'espacement */
+  margin: 5px 5px 5px 0; 
   font-size: 14px;
   font-weight: bold;
-  display: inline-block; /* Gardez le comportement en ligne pour les petits écrans */
+  display: inline-block; 
 }
 
 /* Media query pour les petits écrans */
@@ -66,6 +66,6 @@
   }
 
   .skillItem {
-    margin: 5px 5px 5px 0; /* Ajoutez de la marge en haut et en bas des éléments pour l'espacement */
+    margin: 5px 5px 5px 0; 
   }
 }
