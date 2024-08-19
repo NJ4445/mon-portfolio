@@ -1,5 +1,4 @@
-/* Contact.jsx */
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Supprimez l'importation de useEffect ici
 import styles from './Contact.module.css';
 
 function Contact() {
@@ -10,6 +9,7 @@ function Contact() {
   });
 
   const [confirmationMessage, setConfirmationMessage] = useState('');
+  const [showConfirmationMessage, setShowConfirmationMessage] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,8 +31,14 @@ function Contact() {
       message: ''
     });
 
-    // Afficher le message de confirmation
-    setConfirmationMessage('Your message has been sent successfully!');
+    // Afficher le message de confirmation et démarrer l'animation
+    setConfirmationMessage('Votre message a été envoyé avec succès !');
+    setShowConfirmationMessage(true);
+
+    // Faire disparaître le message de confirmation après 3 secondes
+    setTimeout(() => {
+      setShowConfirmationMessage(false);
+    }, 3000);
   };
 
   return (
@@ -74,10 +80,14 @@ function Contact() {
             required
           ></textarea>
         </div>
-        <button type="submit" className={styles.submitButton}>Contacter moi</button>
+        <button type="submit" className={styles.submitButton}>Me contacter</button>
       </form>
       {confirmationMessage && (
-        <div className={styles.confirmationMessage}>
+        <div
+          className={`${styles.confirmationMessage} ${
+            showConfirmationMessage ? styles.show : styles.hide
+          }`}
+        >
           {confirmationMessage}
         </div>
       )}

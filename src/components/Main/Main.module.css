@@ -1,4 +1,8 @@
-/* Main.module.css */
+/* Styles généraux pour la mise en page */
+body {
+  margin: 0;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
 
 .main {
   padding: 20px;
@@ -13,11 +17,11 @@ section {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Assure que le padding et la bordure sont inclus dans la largeur totale de l'élément */
+  transition: box-shadow 0.3s ease;
 }
 
 section:hover {
-  transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,6 +52,14 @@ section h2 {
     grid-template-columns: 1fr;
     padding: 10px;
     gap: 20px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 }
 
