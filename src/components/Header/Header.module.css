@@ -3,7 +3,7 @@
   position: relative;
   text-align: center;
   padding: 0;
-  background-image: url('../../assets/img/Joy2.webp');
+  background-image: url('../../assets/img/Joy.webp');
   background-size: cover;
   background-position: center; 
   background-attachment: fixed;
@@ -95,7 +95,7 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image: url('../../assets/img/Joy2_small.webp.webp'); 
+    background-image: url('../../assets/img/Joy_small.webp.webp'); 
   }
 
   .nav {
