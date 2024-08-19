@@ -4,9 +4,9 @@
   padding: 0;
   background-image: url('../../assets/img/Joy.webp');
   background-size: cover;
-  background-position: center 40%; /* Ajusté pour recentrer l'image verticalement */
+  background-position: center 40%;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 100vh; /* S'assure que le header occupe la hauteur de l'écran */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@
   right: 0;
   bottom: 0;
   background: inherit;
-  z-index: -1;
+  z-index: -1; /* Assure que l'image de fond reste derrière le contenu */
 }
 
 .overlay {
@@ -29,18 +29,18 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 0;
+  z-index: 0; /* Assure que l'overlay ne masque pas le texte */
 }
 
 .textOverlay {
   position: absolute;
-  top: 50%; /* Recentré à 50% */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   z-index: 1;
   width: 90%;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .mainTitle {
@@ -87,31 +87,30 @@
   color: black;
 }
 
-
-
 /* Media query pour les petits écrans */
 @media (max-width: 768px) {
   .header {
-    height: 100vh;
+    min-height: 100vh; /* Assure que le header occupe toute la hauteur de l'écran */
     background-size: cover;
-    background-position: center 40%; /* Ajusté pour petits écrans */
+    background-position: center; /* Centre l'image pour les petits écrans */
+    background-attachment: scroll; /* Évite les problèmes de fixation de fond sur mobile */
   }
 
   .nav {
-    flex-direction: row;
+    flex-direction: column; /* Positionne les liens de navigation en colonne */
     padding: 2vw;
   }
 
   .navLink {
     font-size: 1em;
-    margin: 0 1vw;
+    margin: 1vw 0;
   }
 
   .mainTitle {
-    font-size: 4vw;
+    font-size: 5vw; /* Ajuste la taille du titre pour les petits écrans */
   }
 
   .mainParagraph {
-    font-size: 3vw;
+    font-size: 4vw; /* Ajuste la taille du paragraphe pour les petits écrans */
   }
 }
