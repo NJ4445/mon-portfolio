@@ -45,7 +45,7 @@
   background-color: #ffecb3;
   padding: 5px 10px;
   border-radius: 5px;
-  margin: 5px; /* Ajoutez de la marge autour des éléments pour l'espacement */
+  margin: 5px 5px 5px 0; /* Ajoutez de la marge autour des éléments pour l'espacement */
   font-size: 14px;
   font-weight: bold;
   display: inline-block; /* Gardez le comportement en ligne pour les petits écrans */
@@ -66,6 +66,6 @@
   }
 
   .skillItem {
-    margin: 5px 0; /* Ajoutez de la marge en haut et en bas des éléments pour l'espacement */
+    margin: 5px 5px 5px 0; /* Ajoutez de la marge en haut et en bas des éléments pour l'espacement */
   }
 }
