@@ -3,7 +3,7 @@
   position: relative;
   text-align: center;
   padding: 0;
-  background-image: url('../../assets/img/about.webp');
+  background-image: url('../../assets/img/Joy2.webp');
   background-size: contain;
   background-position: center; 
   background-attachment: fixed;
@@ -117,7 +117,7 @@
 @media (max-width: 768px) {
   .header {
     height: 100vh;
-   
+    background-image: url('../../assets/img/Joy2_small.webp.webp'); 
     background-size: cover;
     background-position: center;
   }

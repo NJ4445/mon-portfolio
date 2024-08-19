@@ -1,7 +1,7 @@
 /* About.jsx */
 import React from 'react';
 import styles from './About.module.css';
-import aboutImage from '../../assets/img/Joy2.webp'; 
+import aboutImage from '../../assets/img/about.webp'; 
 
 function About() {
   return (
