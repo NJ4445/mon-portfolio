@@ -1,18 +1,16 @@
-/* Header.module.css */
 .header {
   position: relative;
   text-align: center;
   padding: 0;
   background-image: url('../../assets/img/Joy.webp');
   background-size: cover;
-  background-position: center; 
+  background-position: center 40%; /* Ajusté pour recentrer l'image verticalement */
   background-attachment: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .imageContainer {
   position: absolute;
@@ -36,7 +34,7 @@
 
 .textOverlay {
   position: absolute;
-  top: 70%;
+  top: 50%; /* Recentré à 50% */
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -46,14 +44,14 @@
 }
 
 .mainTitle {
-  font-size: 5vw;
+  font-size: 4vw;
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
 
 .mainParagraph {
-  font-size: 2.5vw;
+  font-size: 2vw;
   margin-top: 10px;
   padding: 0;
 }
@@ -89,36 +87,14 @@
   color: black;
 }
 
+
+
 /* Media query pour les petits écrans */
-@media (min-width: 769px) {
-  .header {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .nav {
-    padding: 2vw;
-  }
-
-  .navLink {
-    font-size: 1.5em;
-  }
-
-  .mainTitle {
-    font-size: 3em;
-  }
-
-  .mainParagraph {
-    font-size: 1.5em;
-  }
-}
-
 @media (max-width: 768px) {
   .header {
     height: 100vh;
     background-size: cover;
-    background-position: center;
+    background-position: center 40%; /* Ajusté pour petits écrans */
   }
 
   .nav {
