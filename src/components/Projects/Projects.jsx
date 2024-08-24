@@ -6,21 +6,21 @@ function Projects() {
   const projects = [
     { 
       name: "Kasa", 
-      description: "Application de gestion immobilière avec une interface utilisateur interactive.", 
+      description: "Application front-end pour annonces immobilières, utilisant React, React Router, Sass, et animations CSS.", 
       link: "https://brilliant-twilight-bbcb7c.netlify.app",
-      skills: ["React", "CSS Modules", "Responsive Design"]
+      skills: ["React", "React Router", "CSS Modules", "Sass", "Animations CSS", "Responsive Design"]
     },
     { 
       name: "Nina_Carducci", 
-      description: "Un projet personnel mettant en avant le travail de Nina Carducci, avec une interface interactive et un design moderne.", 
+      description: "Projet axé sur l'optimisation des performances et de l'accessibilité, avec des outils comme Lighthouse et Wave.", 
       link: "https://nj4445.github.io/Nina_Carducci/",
-      skills: ["React", "JavaScript", "HTML", "CSS"]
+      skills: ["React", "JavaScript", "HTML", "CSS", "Lighthouse", "Wave"]
     },
     { 
       name: "Ohmyfood", 
-      description: "Une application web pour découvrir et commander des plats, mettant en œuvre des technologies modernes pour une expérience utilisateur fluide.", 
+      description: "Intégration mobile-first avec animations CSS et gestion des versions via Git et GitHub.", 
       link: "https://nj4445.github.io/ohmyfood/",
-      skills: ["React", "Sass", "API Integration"]
+      skills: ["React", "Sass", "API Integration", "Animations CSS", "Git", "GitHub"]
     },
   ];
   
