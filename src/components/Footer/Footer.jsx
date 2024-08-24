@@ -8,6 +8,7 @@ import styles from './Footer.module.css';
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
 
+  // Fonction pour ajuster la visibilité du bouton en fonction du défilement
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
@@ -16,6 +17,7 @@ function Footer() {
     }
   };
 
+  // Fonction pour faire défiler la page jusqu'en haut de manière fluide
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -23,6 +25,7 @@ function Footer() {
     });
   };
 
+   // Ajout d'un écouteur d'événements pour le défilement
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
