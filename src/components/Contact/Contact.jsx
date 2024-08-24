@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Supprimez l'importation de useEffect ici
+import React, { useState } from 'react'; 
 import styles from './Contact.module.css';
 
 function Contact() {
